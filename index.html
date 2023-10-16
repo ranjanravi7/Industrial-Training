@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="./index.css" />
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- inline stylesheet -->
+    <!-- internal css -->
+    <!-- external css -->
+    <!-- id, class -->
+
+    <div id="container"></div>
+    <!-- Navbar -->
+    <main style="display: flex">
+      <div class="filter-box">
+        <h3>Filter</h3>
+        <input type="text" placeholder="Search..." />
+        <div class="filter-options">
+          <div class="filter-option">
+            <label for="filter-option-1">Color</label>
+            <select name="filter-option-1" id="filter-option-1">
+              <option value="black">Black</option>
+              <option value="white">White</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+            </select>
+          </div>
+          <div class="filter-option">
+            <label for="filter-option-2">Size</label>
+            <select name="filter-option-2" id="filter-option-2">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <div class="filter-option">
+            <label for="filter-option-3">Categories</label>
+            <select name="filter-option-3" id="filter-option-3">
+              <option value="electronics">Electronics</option>
+              <option value="clothing">Clothing</option>
+              <option value="home">Home</option>
+              <option value="beauty">Beauty</option>
+              <option value="health">Health</option>
+            </select>
+          </div>
+          <div class="filter-option">
+            <label for="filter-option-4">Gender</label>
+            <select name="filter-option-4" id="filter-option-4">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="unisex">Unisex</option>
+            </select>
+          </div>
+          <div class="filter-option">
+            <label for="filter-option-4">Price</label>
+            <input
+              type="range"
+              name="filter-option-4"
+              id="filter-option-4"
+              min="0"
+              max="100"
+            />
+            <div class="price-display">
+              <span id="price-min">0</span>
+              <span id="price-max">100</span>
+            </div>
+          </div>
+        </div>
+        <button type="submit">Filter</button>
+      </div>
+
+      <!-- list of categories -->
+      <aside>
+        <section id="categories"></section>
+
+        <section id="carousel"></section>
+        <section id="product">
+          <div class="product-grid">
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 1"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 1</h3>
+                <p class="product-price">$100</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 2"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 2</h3>
+                <p class="product-price">$150</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 10"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 10</h3>
+                <p class="product-price">$200</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 1"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 1</h3>
+                <p class="product-price">$100</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 2"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 2</h3>
+                <p class="product-price">$150</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 10"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 10</h3>
+                <p class="product-price">$200</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 1"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 1</h3>
+                <p class="product-price">$100</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 2"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 2</h3>
+                <p class="product-price">$150</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 10"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 10</h3>
+                <p class="product-price">$200</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 1"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 1</h3>
+                <p class="product-price">$100</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 2"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 2</h3>
+                <p class="product-price">$150</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 10"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 10</h3>
+                <p class="product-price">$200</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 1"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 1</h3>
+                <p class="product-price">$100</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 2"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 2</h3>
+                <p class="product-price">$150</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img
+                src="https://rukminim2.flixcart.com/image/832/832/xif0q/shirt/g/f/1/xl-tie-casual-shirt-webric-original-imagkzgu6evhaehy.jpeg?q=70"
+                alt="Product image 10"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Product Name 10</h3>
+                <p class="product-price">$200</p>
+                <p class="product-sizes">Available sizes: S, M, L, XL</p>
+                <button type="button" class="product-button">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <section id="footer">
+      <div>
+        <li class="heading">About</li>
+        <li>About Us</li>
+        <li>Career</li>
+        <li>Flipkart Stories</li>
+        <li>Cleartrip</li>
+      </div>
+      <div>
+        <li class="heading">Help</li>
+        <li>About Us</li>
+        <li>Career</li>
+        <li>Flipkart Stories</li>
+        <li>Cleartrip</li>
+      </div>
+      <div>
+        <li class="heading">CONUSMER POLICY</li>
+        <li>About Us</li>
+        <li>Career</li>
+        <li>Flipkart Stories</li>
+        <li>Cleartrip</li>
+      </div>
+      <div>
+        <li class="heading">Social</li>
+        <li>Instagram</li>
+        <li>LinkedIn</li>
+        <li>Facebook</li>
+        <li>X</li>
+      </div>
+      <div>
+        <li class="heading">Address</li>
+        <li>About Us</li>
+        <li>Career</li>
+        <li>Flipkart Stories</li>
+        <li>Cleartrip</li>
+      </div>
+      <div>
+        <li class="heading">Contact us</li>
+        <li>About Us</li>
+        <li>Career</li>
+        <li>Flipkart Stories</li>
+        <li>Cleartrip</li>
+      </div>
+    </section>
+    <script>
+      const priceRangeInput = document.getElementById("filter-option-4");
+      const priceMinDisplay = document.getElementById("price-min");
+      const priceMaxDisplay = document.getElementById("price-max");
+
+      priceRangeInput.addEventListener("input", () => {
+        const priceMin = priceRangeInput.min;
+        const priceMax = priceRangeInput.max;
+        const currentValue = priceRangeInput.value;
+
+        priceMinDisplay.textContent = priceMin;
+        priceMaxDisplay.textContent = priceMax;
+      });
+    </script>
+  </body>
+</html>
+<script>
+  $(function () {
+    $("#container").load("./Navabar.html");
+  });
+
+  $(function () {
+    $("#carousel").load("./carousel.html");
+  });
+</script>
